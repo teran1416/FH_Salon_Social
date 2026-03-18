@@ -1,0 +1,616 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FH Salón Social | Eventos inolvidables</title>
+    <meta
+      name="description"
+      content="FH Salón Social: un espacio elegante y acogedor para bodas, cumpleaños, quinceañeros, eventos empresariales y celebraciones personalizadas. Solicita tu cotización o reserva."
+    />
+    <meta name="theme-color" content="#0B0B0D" />
+
+    <meta property="og:title" content="FH Salón Social | Eventos inolvidables" />
+    <meta
+      property="og:description"
+      content="Espacio amplio, elegante y acogedor. Atención personalizada. Solicita tu cotización o reserva."
+    />
+    <meta property="og:type" content="website" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ["Montserrat", "ui-sans-serif", "system-ui"],
+              serif: ["Playfair Display", "ui-serif", "Georgia"],
+            },
+            colors: {
+              ink: "#0B0B0D",
+              ivory: "#FAF8F2",
+              gold: {
+                50: "#FFF7E8",
+                100: "#FFECC4",
+                200: "#FFD98A",
+                300: "#F6C35A",
+                400: "#EAA93A",
+                500: "#D18C22",
+                600: "#B47116",
+                700: "#8F5812",
+                800: "#6D430F",
+                900: "#4C2E0C",
+              },
+            },
+            boxShadow: {
+              luxe: "0 18px 50px rgba(0,0,0,.35)",
+              soft: "0 10px 30px rgba(0,0,0,.18)",
+            },
+            keyframes: {
+              floaty: {
+                "0%, 100%": { transform: "translateY(0)" },
+                "50%": { transform: "translateY(-6px)" },
+              },
+            },
+            animation: {
+              floaty: "floaty 4.5s ease-in-out infinite",
+            },
+          },
+        },
+      };
+    </script>
+
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css" />
+  </head>
+
+  <body class="bg-ink text-ivory font-sans antialiased">
+    <a class="skip-link" href="#contenido">Saltar al contenido</a>
+
+    <header class="fixed top-0 inset-x-0 z-50">
+      <nav
+        class="nav-blur border-b border-white/10"
+        aria-label="Navegación principal"
+      >
+        <div class="mx-auto max-w-6xl px-4 sm:px-6">
+          <div class="flex h-20 items-center justify-between">
+            <a
+              href="#inicio"
+              class="group inline-flex items-center gap-4"
+              aria-label="Ir a inicio"
+            >
+              <span
+                class="grid h-12 w-12 place-items-center rounded-xl border border-white/15 bg-white/5 overflow-hidden shadow-soft"
+              >
+                <img
+                  src="./logo.jpg"
+                  alt="Logo FH Salón Social"
+                  class="h-full w-full object-cover"
+                  loading="lazy"
+                />
+              </span>
+              <div class="leading-tight">
+                <div class="font-serif text-[15px] tracking-wide">
+                  FH Salón Social
+                </div>
+                <div class="text-[11px] text-white/65">
+                  Eventos sociales y empresariales
+                </div>
+              </div>
+            </a>
+
+            <button
+              id="menuBtn"
+              class="md:hidden inline-flex items-center justify-center rounded-xl border border-white/15 bg-white/5 px-3 py-2 text-sm hover:bg-white/10 focus:outline-none focus-visible:ring-2 focus-visible:ring-gold-300"
+              aria-expanded="false"
+              aria-controls="mobileMenu"
+            >
+              Menú
+            </button>
+
+            <div class="hidden md:flex items-center gap-7 text-sm">
+              <a class="nav-link" href="#sobre">Sobre nosotros</a>
+              <a class="nav-link" href="#servicios">Servicios</a>
+              <a class="nav-link" href="#galeria">Galería</a>
+              <a class="nav-link" href="#testimonios">Testimonios</a>
+              <a
+                id="ctaWhatsappNav"
+                href="#"
+                class="inline-flex items-center gap-2 rounded-xl bg-gold-300 px-4 py-2 font-semibold text-ink shadow-soft hover:bg-gold-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-gold-200"
+              >
+                <img src="./whatsapp.jpg" alt="" class="wa-icon" />
+                <span>Solicitar cotización</span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div id="mobileMenu" class="md:hidden hidden border-t border-white/10">
+          <div class="mx-auto max-w-6xl px-4 sm:px-6 py-4 grid gap-3">
+            <a class="nav-link" href="#sobre">Sobre nosotros</a>
+            <a class="nav-link" href="#servicios">Servicios</a>
+            <a class="nav-link" href="#galeria">Galería</a>
+            <a class="nav-link" href="#testimonios">Testimonios</a>
+            <a
+              id="ctaWhatsappNavMobile"
+              href="#"
+              class="inline-flex w-full justify-center items-center gap-2 rounded-xl bg-gold-300 px-4 py-2 font-semibold text-ink shadow-soft hover:bg-gold-200"
+            >
+              <img src="./whatsapp.jpg" alt="" class="wa-icon" />
+              <span>Solicitar cotización</span>
+            </a>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main id="contenido">
+      <section id="inicio" class="hero relative min-h-[92vh] pt-20">
+        <div class="hero-bg" aria-hidden="true"></div>
+        <div class="hero-overlay" aria-hidden="true"></div>
+
+        <div class="mx-auto max-w-6xl px-4 sm:px-6 py-16 sm:py-20">
+          <div class="grid lg:grid-cols-12 gap-10 items-center">
+            <div class="lg:col-span-7" data-aos="fade-up" data-aos-duration="900">
+              <p
+                class="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-4 py-2 text-xs text-white/80"
+              >
+                <span
+                  class="h-1.5 w-1.5 rounded-full bg-gold-300 shadow-[0_0_18px_rgba(246,195,90,.9)]"
+                ></span>
+                Un espacio para celebraciones con estilo
+              </p>
+
+              <h1
+                class="mt-6 font-serif text-4xl sm:text-5xl lg:text-6xl leading-[1.05]"
+              >
+                Haz de tu evento un
+                <span class="text-gold-200">momento inolvidable</span>
+              </h1>
+              <p class="mt-5 text-lg text-white/80 max-w-xl">
+                Bodas, cumpleaños, quinceañeros, eventos empresariales y más. Un
+                salón amplio, elegante y acogedor para crear recuerdos únicos.
+              </p>
+
+              <div class="mt-8 flex flex-col sm:flex-row gap-3">
+                <a
+                  href="#servicios"
+                  class="inline-flex items-center justify-center rounded-xl bg-gold-300 px-6 py-3 font-semibold text-ink shadow-luxe hover:bg-gold-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-gold-200"
+                >
+                  Ver servicios
+                </a>
+                <a
+                  href="#galeria"
+                  class="inline-flex items-center justify-center rounded-xl border border-white/15 bg-white/5 px-6 py-3 font-semibold text-white hover:bg-white/10 focus:outline-none focus-visible:ring-2 focus-visible:ring-gold-300"
+                >
+                  Ver galería
+                </a>
+              </div>
+
+              <dl class="mt-10 grid grid-cols-2 sm:grid-cols-4 gap-4">
+                <div class="stat-card" data-aos="fade-up" data-aos-delay="50">
+                  <dt class="stat-label">Ambiente</dt>
+                  <dd class="stat-value">Elegante</dd>
+                </div>
+                <div class="stat-card" data-aos="fade-up" data-aos-delay="120">
+                  <dt class="stat-label">Atención</dt>
+                  <dd class="stat-value">VIP</dd>
+                </div>
+                <div class="stat-card" data-aos="fade-up" data-aos-delay="190">
+                  <dt class="stat-label">Eventos</dt>
+                  <dd class="stat-value">A medida</dd>
+                </div>
+                <div class="stat-card" data-aos="fade-up" data-aos-delay="260">
+                  <dt class="stat-label">Ubicación</dt>
+                  <dd class="stat-value">Accesible</dd>
+                </div>
+              </dl>
+            </div>
+
+            <div class="lg:col-span-5" data-aos="fade-left" data-aos-duration="900">
+              <div class="glass-card p-6 sm:p-7">
+                <div class="flex items-start justify-between gap-4">
+                  <div>
+                    <h2 class="font-serif text-2xl">Reserva sin complicaciones</h2>
+                    <p class="mt-2 text-sm text-white/75">
+                      Cuéntanos tu idea y te enviamos una propuesta personalizada.
+                    </p>
+                  </div>
+                  <div class="badge-gold animate-floaty">Premium</div>
+                </div>
+
+                <ul class="mt-6 grid gap-3 text-sm">
+                  <li class="flex gap-3">
+                    <span class="icon-dot"></span>
+                    <span>Amplio espacio para eventos sociales y empresariales.</span>
+                  </li>
+                  <li class="flex gap-3">
+                    <span class="icon-dot"></span>
+                    <span>Decoración hermosa y adaptable al estilo de tu evento.</span>
+                  </li>
+                  <li class="flex gap-3">
+                    <span class="icon-dot"></span>
+                    <span>Atención personalizada y acompañamiento en cada detalle.</span>
+                  </li>
+                  <li class="flex gap-3">
+                    <span class="icon-dot"></span>
+                    <span>Parqueadero propio para mayor comodidad.</span>
+                  </li>
+                </ul>
+
+                <div class="mt-7 grid grid-cols-2 gap-3">
+                  <a
+                    id="ctaWhatsappHero"
+                    class="inline-flex items-center justify-center gap-2 rounded-xl border border-white/15 bg-white/5 px-4 py-3 font-semibold hover:bg-white/10"
+                    href="#"
+                    rel="noopener"
+                  >
+                    <img src="./whatsapp.jpg" alt="" class="wa-icon" />
+                    <span>WhatsApp</span>
+                  </a>
+                  <a
+                    id="ctaWhatsappHeroSecondary"
+                    class="inline-flex items-center justify-center gap-2 rounded-xl bg-gold-300 px-4 py-3 font-semibold text-ink hover:bg-gold-200"
+                    href="#"
+                    rel="noopener"
+                  >
+                    <img src="./whatsapp.jpg" alt="" class="wa-icon" />
+                    <span>Agendar</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="sobre" class="py-20 sm:py-24">
+        <div class="mx-auto max-w-6xl px-4 sm:px-6">
+          <div class="grid lg:grid-cols-12 gap-10 items-start">
+            <div class="lg:col-span-6" data-aos="fade-up">
+              <p class="eyebrow">Sobre nosotros</p>
+              <h2 class="section-title">
+                Elegancia, comodidad y una experiencia impecable
+              </h2>
+              <p class="mt-5 text-white/80 leading-relaxed">
+                FH Salón Social es un espacio amplio, elegante y acogedor, ideal
+                para todo tipo de celebraciones. Nos caracterizamos por nuestra
+                excelente atención y compromiso con cada evento.
+              </p>
+
+              <div class="mt-8 grid sm:grid-cols-2 gap-4">
+                <div class="feature" data-aos="fade-up" data-aos-delay="50">
+                  <div class="feature-icon">▢</div>
+                  <div>
+                    <h3 class="feature-title">Amplio espacio</h3>
+                    <p class="feature-text">
+                      Capacidad flexible para eventos íntimos o grandes celebraciones.
+                    </p>
+                  </div>
+                </div>
+                <div class="feature" data-aos="fade-up" data-aos-delay="110">
+                  <div class="feature-icon">✦</div>
+                  <div>
+                    <h3 class="feature-title">Hermosa decoración</h3>
+                    <p class="feature-text">
+                      Estética sofisticada y adaptable a tu concepto.
+                    </p>
+                  </div>
+                </div>
+                <div class="feature" data-aos="fade-up" data-aos-delay="170">
+                  <div class="feature-icon">◎</div>
+                  <div>
+                    <h3 class="feature-title">Atención personalizada</h3>
+                    <p class="feature-text">
+                      Acompañamiento cercano para que todo salga perfecto.
+                    </p>
+                  </div>
+                </div>
+                <div class="feature" data-aos="fade-up" data-aos-delay="230">
+                  <div class="feature-icon">⟡</div>
+                  <div>
+                    <h3 class="feature-title">Parqueadero propio</h3>
+                    <p class="feature-text">
+                      Comodidad y seguridad para tus invitados.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="lg:col-span-6" data-aos="fade-left">
+              <div class="grid gap-4">
+                <div class="media-card">
+                  <div class="media-bg media-1" role="img" aria-label="Salón elegante con iluminación cálida"></div>
+                  <div class="media-caption">
+                    <div class="font-semibold">Ambiente cálido</div>
+                    <div class="text-xs text-white/70">
+                      Iluminación y detalles que elevan tu evento.
+                    </div>
+                  </div>
+                </div>
+                <div class="grid sm:grid-cols-2 gap-4">
+                  <div class="media-card">
+                    <div class="media-bg media-2" role="img" aria-label="Mesa decorada para evento"></div>
+                    <div class="media-caption">
+                      <div class="font-semibold">Decoración</div>
+                      <div class="text-xs text-white/70">Personalizable</div>
+                    </div>
+                  </div>
+                  <div class="media-card">
+                    <div class="media-bg media-3" role="img" aria-label="Área de bienvenida para invitados"></div>
+                    <div class="media-caption">
+                      <div class="font-semibold">Recepción</div>
+                      <div class="text-xs text-white/70">Experiencia fluida</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <p class="mt-4 text-xs text-white/55">
+                Imágenes de referencia (puedes reemplazarlas por fotos reales del salón).
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="servicios" class="py-20 sm:py-24 bg-white/3">
+        <div class="mx-auto max-w-6xl px-4 sm:px-6">
+          <div class="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6">
+            <div data-aos="fade-up">
+              <p class="eyebrow">Servicios</p>
+              <h2 class="section-title">Diseñado para cada tipo de celebración</h2>
+              <p class="mt-4 text-white/80 max-w-2xl">
+                Desde eventos íntimos hasta grandes producciones. Te ayudamos a crear
+                una experiencia elegante y memorable.
+              </p>
+            </div>
+            <a
+              href="#contacto"
+              class="inline-flex items-center justify-center rounded-xl border border-white/15 bg-white/5 px-5 py-3 font-semibold hover:bg-white/10"
+              data-aos="fade-up"
+              data-aos-delay="80"
+            >
+              Consultar disponibilidad
+            </a>
+          </div>
+
+          <div class="mt-10 grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+            <article class="service-card" data-aos="zoom-in" data-aos-delay="30">
+              <div class="service-icon">💍</div>
+              <h3 class="service-title">Bodas</h3>
+              <p class="service-text">
+                Una atmósfera romántica, elegante y perfecta para tu gran día.
+              </p>
+            </article>
+            <article class="service-card" data-aos="zoom-in" data-aos-delay="90">
+              <div class="service-icon">🎂</div>
+              <h3 class="service-title">Cumpleaños</h3>
+              <p class="service-text">
+                Celebra con estilo y comodidad, con una experiencia a tu medida.
+              </p>
+            </article>
+            <article class="service-card" data-aos="zoom-in" data-aos-delay="150">
+              <div class="service-icon">👑</div>
+              <h3 class="service-title">Quinceañeros</h3>
+              <p class="service-text">
+                Un escenario especial para una noche inolvidable.
+              </p>
+            </article>
+            <article class="service-card" data-aos="zoom-in" data-aos-delay="210">
+              <div class="service-icon">🏢</div>
+              <h3 class="service-title">Reuniones empresariales</h3>
+              <p class="service-text">
+                Un ambiente profesional con toque premium para tu evento corporativo.
+              </p>
+            </article>
+            <article class="service-card" data-aos="zoom-in" data-aos-delay="270">
+              <div class="service-icon">🎉</div>
+              <h3 class="service-title">Fiestas</h3>
+              <p class="service-text">
+                Música, ambiente y un espacio diseñado para disfrutar.
+              </p>
+            </article>
+            <article class="service-card" data-aos="zoom-in" data-aos-delay="330">
+              <div class="service-icon">✨</div>
+              <h3 class="service-title">Eventos personalizados</h3>
+              <p class="service-text">
+                Adaptamos el salón a tu concepto: temática, montaje y detalles.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="galeria" class="py-20 sm:py-24 bg-white/3">
+        <div class="mx-auto max-w-6xl px-4 sm:px-6">
+          <div data-aos="fade-up">
+            <p class="eyebrow">Galería</p>
+            <h2 class="section-title">Inspiración para tu próximo evento</h2>
+            <p class="mt-4 text-white/80 max-w-2xl">
+              Una muestra del estilo y ambiente. Reemplaza estas imágenes por fotos reales
+              para elevar aún más la confianza.
+            </p>
+          </div>
+
+          <div class="mt-10 grid grid-cols-2 lg:grid-cols-4 gap-4">
+            <a class="gallery-item" href="#" aria-label="Abrir imagen 1" data-img="https://images.unsplash.com/photo-1520854221256-17451cc331bf?auto=format&fit=crop&w=1400&q=80" data-aos="zoom-in">
+              <img
+                loading="lazy"
+                alt="Evento elegante con decoración"
+                src="https://images.unsplash.com/photo-1520854221256-17451cc331bf?auto=format&fit=crop&w=900&q=80"
+              />
+              <span class="gallery-hover">Ver</span>
+            </a>
+            <a class="gallery-item" href="#" aria-label="Abrir imagen 2" data-img="https://images.unsplash.com/photo-1510070009289-b5bc34383727?auto=format&fit=crop&w=1400&q=80" data-aos="zoom-in" data-aos-delay="60">
+              <img
+                loading="lazy"
+                alt="Mesa decorada para celebración"
+                src="https://images.unsplash.com/photo-1510070009289-b5bc34383727?auto=format&fit=crop&w=900&q=80"
+              />
+              <span class="gallery-hover">Ver</span>
+            </a>
+            <a class="gallery-item" href="#" aria-label="Abrir imagen 3" data-img="https://images.unsplash.com/photo-1529692236671-f1f6cf9683ba?auto=format&fit=crop&w=1400&q=80" data-aos="zoom-in" data-aos-delay="120">
+              <img
+                loading="lazy"
+                alt="Salón con iluminación cálida"
+                src="https://images.unsplash.com/photo-1529692236671-f1f6cf9683ba?auto=format&fit=crop&w=900&q=80"
+              />
+              <span class="gallery-hover">Ver</span>
+            </a>
+            <a class="gallery-item" href="#" aria-label="Abrir imagen 4" data-img="https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?auto=format&fit=crop&w=1400&q=80" data-aos="zoom-in" data-aos-delay="180">
+              <img
+                loading="lazy"
+                alt="Detalle decorativo elegante"
+                src="https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?auto=format&fit=crop&w=900&q=80"
+              />
+              <span class="gallery-hover">Ver</span>
+            </a>
+            <a class="gallery-item col-span-2" href="#" aria-label="Abrir imagen 5" data-img="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=1600&q=80" data-aos="zoom-in">
+              <img
+                loading="lazy"
+                alt="Evento empresarial"
+                src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=1200&q=80"
+              />
+              <span class="gallery-hover">Ver</span>
+            </a>
+            <a class="gallery-item" href="#" aria-label="Abrir imagen 6" data-img="https://images.unsplash.com/photo-1524777313293-86d2ab467344?auto=format&fit=crop&w=1400&q=80" data-aos="zoom-in" data-aos-delay="80">
+              <img
+                loading="lazy"
+                alt="Decoración con flores"
+                src="https://images.unsplash.com/photo-1524777313293-86d2ab467344?auto=format&fit=crop&w=900&q=80"
+              />
+              <span class="gallery-hover">Ver</span>
+            </a>
+            <a class="gallery-item" href="#" aria-label="Abrir imagen 7" data-img="https://images.unsplash.com/photo-1527515545081-5db817172677?auto=format&fit=crop&w=1400&q=80" data-aos="zoom-in" data-aos-delay="140">
+              <img
+                loading="lazy"
+                alt="Ambientación con luces"
+                src="https://images.unsplash.com/photo-1527515545081-5db817172677?auto=format&fit=crop&w=900&q=80"
+              />
+              <span class="gallery-hover">Ver</span>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section id="testimonios" class="py-20 sm:py-24">
+        <div class="mx-auto max-w-6xl px-4 sm:px-6">
+          <div class="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6">
+            <div data-aos="fade-up">
+              <p class="eyebrow">Testimonios</p>
+              <h2 class="section-title">Reseñas en Google Maps</h2>
+              <p class="mt-4 text-white/80 max-w-2xl">
+                Estas son algunas de las reseñas que nuestros clientes han dejado en Google Maps
+                sobre su experiencia en FH Salón Social.
+              </p>
+            </div>
+
+            <a
+              href="https://maps.app.goo.gl/PL3UqA9qccGfho8s7"
+              target="_blank"
+              rel="noopener"
+              class="text-xs text-gold-200 hover:text-gold-100 underline-offset-4 hover:underline"
+            >
+              Ver todas las reseñas directamente en Google Maps
+            </a>
+          </div>
+
+          <div class="mt-10 grid md:grid-cols-3 gap-4">
+            <article class="testimonial-card" data-aos="fade-up">
+              <p class="text-xs text-white/60 mb-2">Reseña en Google Maps</p>
+              <blockquote class="testimonial-quote">
+                “Un lugar magnífico, muy amplio y con linda decoración. Excelente atención.”
+              </blockquote>
+              <div class="mt-3 flex items-center justify-between">
+                <figcaption class="testimonial-name">Adriana M.</figcaption>
+                <span class="text-xs text-gold-200">★ ★ ★ ★ ★</span>
+              </div>
+            </article>
+            <article class="testimonial-card" data-aos="fade-up" data-aos-delay="80">
+              <p class="text-xs text-white/60 mb-2">Reseña en Google Maps</p>
+              <blockquote class="testimonial-quote">
+                “Espacio acogedor, perfecto para reuniones, el personal te hace sentir VIP.”
+              </blockquote>
+              <div class="mt-3 flex items-center justify-between">
+                <figcaption class="testimonial-name">Yizeth O.</figcaption>
+                <span class="text-xs text-gold-200">★ ★ ★ ★ ★</span>
+              </div>
+            </article>
+            <article class="testimonial-card" data-aos="fade-up" data-aos-delay="140">
+              <p class="text-xs text-white/60 mb-2">Reseña en Google Maps</p>
+              <blockquote class="testimonial-quote">
+                “Salón bonito, buena atención y excelente ambiente.”
+              </blockquote>
+              <div class="mt-3 flex items-center justify-between">
+                <figcaption class="testimonial-name">Carlos R.</figcaption>
+                <span class="text-xs text-gold-200">★ ★ ★ ★ ★</span>
+              </div>
+            </article>
+          </div>
+
+          <div class="mt-8 rounded-2xl overflow-hidden border border-white/15 bg-white/5">
+            <!-- IMPORTANTE: Para mostrar TODAS las reseñas (antiguas y nuevas) tal como aparecen en Google Maps,
+                 entra a tu ficha en Google Maps, haz clic en "Compartir" → "Insertar un mapa"
+                 y reemplaza el atributo src de este iframe por el que te da Google. -->
+            <iframe
+              title="Reseñas de FH Salón Social en Google Maps"
+              src="https://www.google.com/maps?q=FH+Sal%C3%B3n+Social,+Palmira,+Valle+del+Cauca&output=embed"
+              width="100%"
+              height="320"
+              style="border:0;"
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+            ></iframe>
+          </div>
+        </div>
+      </section>
+
+      <!-- Sección de contacto eliminada: ahora todo el contacto se canaliza por WhatsApp y redes. -->
+    </main>
+
+    <footer class="border-t border-white/10 py-10">
+        <div class="mx-auto max-w-6xl px-4 sm:px-6">
+          <div class="flex flex-col sm:flex-row gap-2 sm:items-center sm:justify-between text-xs text-white/55">
+            <div>© <span id="year"></span> FH Salón Social. Todos los derechos reservados.</div>
+            <div class="flex gap-3">
+              <a class="hover:text-white/80" href="#sobre">Sobre nosotros</a>
+              <a class="hover:text-white/80" href="#servicios">Servicios</a>
+              <a class="hover:text-white/80" href="#galeria">Galería</a>
+              <a class="hover:text-white/80" href="#testimonios">Testimonios</a>
+            </div>
+          </div>
+      </div>
+    </footer>
+
+    <a
+      id="whatsappFloating"
+      class="wa-float"
+      href="#"
+      aria-label="Abrir WhatsApp"
+      rel="noopener"
+    >
+      <span class="sr-only">Abrir WhatsApp</span>
+      <img
+        src="./whatsapp.jpg"
+        alt="Logo de WhatsApp"
+        class="h-6 w-6"
+      />
+    </a>
+
+    <div id="lightbox" class="lightbox hidden" role="dialog" aria-modal="true" aria-label="Visor de imágenes">
+      <button id="lightboxClose" class="lightbox-close" type="button" aria-label="Cerrar">✕</button>
+      <img id="lightboxImg" alt="Imagen ampliada" />
+    </div>
+
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
